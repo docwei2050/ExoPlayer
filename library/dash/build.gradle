@@ -33,7 +33,7 @@ android {
         }
     }
 
-    testOptions.unitTests.includeAndroidResources = true
+
 }
 
 dependencies {
@@ -41,8 +41,7 @@ dependencies {
     compileOnly 'org.checkerframework:checker-qual:' + checkerframeworkVersion
     compileOnly 'org.checkerframework:checker-compat-qual:' + checkerframeworkVersion
     implementation 'androidx.annotation:annotation:' + androidxAnnotationVersion
-    testImplementation project(modulePrefix + 'testutils')
-    testImplementation 'org.robolectric:robolectric:' + robolectricVersion
+
 }
 
 ext {

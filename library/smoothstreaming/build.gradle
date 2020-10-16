@@ -41,17 +41,7 @@ dependencies {
     compileOnly 'org.checkerframework:checker-qual:' + checkerframeworkVersion
     compileOnly 'org.checkerframework:checker-compat-qual:' + checkerframeworkVersion
     implementation 'androidx.annotation:annotation:' + androidxAnnotationVersion
-    testImplementation project(modulePrefix + 'testutils')
-    testImplementation 'org.robolectric:robolectric:' + robolectricVersion
+
 }
 
-ext {
-    javadocTitle = 'SmoothStreaming module'
-}
-apply from: '../../javadoc_library.gradle'
 
-ext {
-    releaseArtifact = 'exoplayer-smoothstreaming'
-    releaseDescription = 'The ExoPlayer library SmoothStreaming module.'
-}
-apply from: '../../publish.gradle'

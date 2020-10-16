@@ -33,7 +33,7 @@ android {
         }
     }
 
-    testOptions.unitTests.includeAndroidResources = true
+
 }
 
 dependencies {
@@ -41,17 +41,6 @@ dependencies {
     api 'androidx.media:media:' + androidxMediaVersion
     implementation 'androidx.annotation:annotation:' + androidxAnnotationVersion
     compileOnly 'org.checkerframework:checker-qual:' + checkerframeworkVersion
-    testImplementation project(modulePrefix + 'testutils')
-    testImplementation 'org.robolectric:robolectric:' + robolectricVersion
+  
 }
 
-ext {
-    javadocTitle = 'UI module'
-}
-apply from: '../../javadoc_library.gradle'
-
-ext {
-    releaseArtifact = 'exoplayer-ui'
-    releaseDescription = 'The ExoPlayer library UI module.'
-}
-apply from: '../../publish.gradle'

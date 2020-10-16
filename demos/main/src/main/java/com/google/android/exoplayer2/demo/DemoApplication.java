@@ -118,8 +118,7 @@ public class DemoApplication extends Application {
   protected synchronized Cache getDownloadCache() {
     if (downloadCache == null) {
       File downloadContentDirectory = new File(getDownloadDirectory(), DOWNLOAD_CONTENT_DIRECTORY);
-      downloadCache =
-          new SimpleCache(downloadContentDirectory, new NoOpCacheEvictor(), getDatabaseProvider());
+      downloadCache = new SimpleCache(downloadContentDirectory, new NoOpCacheEvictor(), getDatabaseProvider());
     }
     return downloadCache;
   }
